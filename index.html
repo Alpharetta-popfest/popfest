@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Alpharetta Popfest</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1>First Annual Alpharetta Pop Festival</h1>
+      <h1 class="tagline">Join the fight to end Alzheimer's</h1>
+    </header>
+    
+    <section class="details">
+      <h2>
+        Family-friendly benefit concert this summer at Brooke St. Park in downtown Alpharetta, GA featuring live music! <br> <br>
+        Date will be announced soon
+      </h2>
+    </section>
+
+    <section>
+      <h3 class="location">Concert located at Brooke St. Park</h3>
+      <div id="map"></div>
+      <script>
+        function initMap() {
+          var uluru = {lat: 34.074609, lng: -84.291645};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: uluru
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        }
+      </script>
+
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYA9dzg-YfG4QgXQ36o34LUHabm_VKj8&callback=initMap">
+      </script>
+    </section>
+
+    <img src="alz-awareness-ribbon.jpg" id="ribbon1">
+        
+    <div class="donateBorder">
+      <section class="donate">
+        <h3 class="donateToday">
+          Make a donation today!
+        </h3>
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="4RB5ZZD8NT878">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+
+        <p class="proceeds">All proceeds will go to the Alzheimer's Association®</p>
+
+      </section>
+    </div>
+
+  <img src="alz-awareness-ribbon.jpg" id="ribbon2">
+        
+    <section class="volunteer">
+      <h3>
+        If you would like to know more about paid sponsorships or volunteering, please contact us at
+        <a href="mailto:alpharettapopfest@gmail.com?subject=Popfest%20website">alpharettapopfest@gmail.com</a>
+      </h3>
+    </section>
+    
+    <footer class="alz">
+      <h4>
+        For more information on Alzheimer's visit
+        <a href="http://www.alz.org/">
+          <h5>www.alz.org</h5>
+      </h4>
+    </footer>   
+
+
+
+  </body>
+</html>
+ 

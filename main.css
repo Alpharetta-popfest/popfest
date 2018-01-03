@@ -1,0 +1,225 @@
+/* 
+=========================================================================
+RESET FORMAT
+=========================================================================
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ==========================================
+  GRID
+  ==========================================
+*/  
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.container,
+.grid {
+  margin:   0px auto;
+  width: 960px; 
+}
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/* 
+=========================================================================
+BACKGROUND
+=========================================================================
+*/
+
+
+
+/* 
+================================================================
+Transparent overlay
+================================================================
+*/
+
+body {
+  /*background: rgba(255,255,255,0.7);*/
+  font-family: "Arial", Helvetica, sans-serif
+}
+
+/* 
+=========================================================================
+HEADER
+=========================================================================
+*/
+
+.header {
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: bold;
+  color: ghostwhite;
+  background-color: indigo;
+}
+
+.tagline {
+  /*padding: 140px, 20px, 20px, 20px;*/
+  padding-top: 20px;
+  text-align: center;
+  font-size: .75em;
+}
+
+/* 
+=========================================================================
+DETAILS
+=========================================================================
+*/
+
+.details {
+  padding: 40px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.location {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 20px
+}
+
+#map {
+        height: 500px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+       }       
+
+/* 
+=========================================================================
+DONATE AND VOLUNTEER
+=========================================================================
+*/
+
+#ribbon1 {
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin: 40px 0px 0px 240px;
+  /*display: inline-block;*/
+}
+
+.donateBorder {
+  text-align: center;
+}
+
+.donate {
+  border: 4px solid;
+  display: inline-block;
+  height: 100%;
+  width: 35%;
+  margin: 40px 80px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  float: left;
+  }
+
+#ribbon2 {
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin: 40px 0px 0px 20px;
+}
+
+.donateToday {
+  padding-bottom: 20px;
+  font-size: 2em;
+}
+
+.proceeds {
+  padding-top: 20px
+}
+
+.volunteer {
+  clear: both;
+  text-align: center;
+  font-size: 1.4em;
+  }
+
+.alz {
+  clear: both;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+
+
+
+
+
+
