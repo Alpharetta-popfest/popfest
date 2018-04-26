@@ -99,17 +99,16 @@ BACKGROUND
 */
 
 html, body {
-  height: 105%;
   padding: 0;
   margin: 0;
 }
 
-html {
-  background-image: url("BSP2.png");
+/*html {
+  background-image: url("RWB-tiedye.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+*/
 
 /* 
 ================================================================
@@ -118,8 +117,7 @@ Transparent overlay
 */
 
 body {
-  background: rgba(255,255,255,0.7);
-  font-family: "Arial", Helvetica, sans-serif
+  font-family: "Arial", sans-serif;
 }
 
 /* 
@@ -129,19 +127,75 @@ HEADER
 */
 
 .header {
-  padding: 20px 20px 20px 20px;
-  text-align: center;
-  font-size: 4.5em;
-  font-weight: bold;
-  color: ghostwhite;
-  background-color: indigo;
+   position: relative;
+   padding: 3%;
 }
 
-.tagline {
-  /*padding: 140px, 20px, 20px, 20px;*/
-  padding-top: 20px;
+.header:before {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("RWB-tiedye.jpg"); 
+    width: 100%;
+    height: 100%;
+    opacity : 0.2;
+}
+
+.logo{
+  display: block;
+  transform: rotate(-15deg);
+  max-width: 23%;
+  height: auto;
+  border: solid #B01F00 6px;
+  border-radius: 50%;
+  padding-right: 1.5%;
+  padding-bottom: .5%;
+}
+
+
+/* 
+=========================================================================
+NAVBAR
+=========================================================================
+*/
+
+.brand {
+  color: #B01F00 !important;
+  font-family: URW Chancery L;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.nav-link {
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  color: black !important;
+  cursor: pointer;
+}
+
+.navbar-toggler:hover {
+  border-color: black;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+/* 
+=========================================================================
+SPONSORS
+=========================================================================
+*/
+
+.sponsors {
+  padding: 1.5%;
   text-align: center;
-  font-size: .9em;
+  font-size: 150%;
+  font-weight: bold;
+  background: skyblue;
 }
 
 /* 
@@ -150,24 +204,56 @@ DETAILS
 =========================================================================
 */
 
+/*#about {
 
-.details {
-  padding: 3% 0% 2% 0%;
-  text-align: center;
-  font-size: 2.75em;
+}*/
+
+#about .purpose {
+  padding: 3% 4% 3% 3%;
+  background-color: #0432CE;
+  color: ghostwhite;
+  line-height: 1.8;
+  font-size: 160%;
 }
 
-.location {
-  text-align: center;
-  font-size: 2em;
-  margin-top: 7%;
+.purpose .first {
+  font-size: 120%;
+
 }
 
-#map {
-        height: 500px;
-        width: 60%;
-        margin: 3% auto 3% auto;
-}       
+.purpose .popfest {
+  font-size: 140%;
+  margin-top: -20px;
+}
+
+#about .event-details {
+  padding: 3%;
+  line-height: 1.2;
+  font-size: 130%;
+  text-align: center;
+  background-color: #E4E4E4;
+}
+
+.event-details .about-the {
+  color: #B01F00;
+  font-size: 275%;
+}
+
+.event-details .APF {
+  color: #0432CE;
+}
+
+.event-details li {
+  margin: 1.5%;
+}
+
+.event-details p {
+  font-size: 120%;  
+}
+
+.event-details .artists {
+  font-size: 120%;
+}
 
 /* 
 =========================================================================
@@ -175,70 +261,201 @@ DONATE AND VOLUNTEER
 =========================================================================
 */
 
-#ribbon1 {
-  height: 200px;
-  width: 15%;
-  float: left;
-  margin: 3% 0% 0% 3%;
+
+#donate {
+  background-color: #B01F00;
+  padding: 4%;
 }
 
-.donateBorder {
+.donate-box {
   text-align: center;
-}
-
-.donate {
-  border: 6px solid;
-  display: inline-block;
-  height: 100%;
-  width: 45%;
-  margin: 3% 10% 0% 10%;
-  padding: 20px 20px 20px 20px;
+  color: ghostwhite;
+  padding: 2%;
+  border: 6px solid black;
   border-radius: 10px;
-  float: left;
-  }
-
-#ribbon2 {
-  height: 200px;
-  width: 15%;
-  float: left;
-  margin: 3% 0% 0% 0%;
 }
 
 .donateToday {
   padding-bottom: 4%;
-  font-size: 2.3em;
+  font-size: 250%;
   font-weight: bold;
+}
+
+#paypal {
+  padding: 1%;
+}
+
+#paypal:hover {
+  border: 3px solid;
+  border-radius: 10px;
+  transform: scale(1.5, 1.5);
+  background-color: #0432CE;
 }
 
 .proceeds {
   padding-top: 4%;
+  font-size: 150%;
   font-style: italic;
 }
 
-.volunteer {
-  clear: both;
-  text-align: center;
-  padding: 3% 3% 3% 3%;
-  font-size: 2em;
-  }
-
-.email {
-  color: indigo;
+#location {
+  position: relative;
+  padding: 3%;
 }
 
-.alz {
+#location:before {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("BSP2.png"); 
+  width: 100%;
+  height: 100%;
+  opacity : 0.3;
+}
+
+.location {  
   clear: both;
-  padding-top: 3%;
-  padding-bottom: 3%;
   text-align: center;
-  font-size: 1.7em;
+  font-size: 225%;
+}
+
+#map {
+  height: 500px;
+  width: 60%;
+  margin: 2% auto 0% auto;
+}  
+
+
+#contact {
+   position: relative;
+   padding: 3%;
+}
+
+#contact:before {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("RWB-tiedye.jpg"); 
+    width: 100%;
+    height: 100%;
+    opacity : 0.2;
+}     
+
+.sponsorships {
+  padding: 0 10% 1% 5%;
+  font-size: 150%;
+  line-height: 1.4;
+  text-align: center;
+  color: #B01F00;
   font-weight: bold;
+}
+
+.sponsorships-link {
+  font-size: 200%;
+  color: #0432CE;
+}
+
+.sponsorships-link:hover {
+  font-size: 225%;
+  color: #B01F00;
+}
+
+.email-container {
+  padding: 0 3% 0 3%;
+  font-size: 175%;
+  line-height: 1.4;
+  text-align: center;
+  color: #0432CE;
+  font-weight: bold;
+}
+
+.email {
+  color: #B01F00;
+  font-size: 130%;
+}
+
+.footer {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  font-size: 175%;
   color: ghostwhite;
-  background-color: indigo;
+  background-color: #0432CE;
 }
 
 .org {
+  text-decoration: none;
   color: ghostwhite;
+}
+
+.org:hover {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+/* Formatting for mobile */
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 50%;
+  }
+
+  #main-logo .logo{
+    max-width: 30%;
+    border: solid #B01F00 3px;
+  }
+
+  .purpose .popfest {
+    margin-top: -10px;
+  }
+
+  .event-details .about-the {
+    font-size: 205%;
+  }
+
+  .event-details p {
+    font-size: 115%;
+  }
+
+  .donate-box {
+    clear: all;
+    border: 0px solid black;
+  }
+
+
+  #paypal {
+    transform: scale(.8, .8);
+  }
+
+  #paypal:hover {
+    border: 2px solid;
+    border-radius: 10px;
+    transform: scale(1.15, 1.15);
+  }
+
+  .location {
+    font-size: 200%;
+  }
+
+  #map {
+    height: 200px;
+  }
+
+  .sponsorships {
+    padding: 3% 7% 3% 7%;
+  }
+
+  .email-container {
+    padding: 3%;
+  }
+
+  .footer {
+    font-size: 11px;
+  }
 }
 
 
