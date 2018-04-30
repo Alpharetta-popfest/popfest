@@ -117,7 +117,43 @@ Transparent overlay
 */
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Vollcorn", serif;
+}
+
+
+/* 
+=========================================================================
+NAVBAR
+=========================================================================
+*/
+
+.navbar {
+  background-color: #3175D8 !important;
+}
+
+.nav-link {
+  font-size: 170%;
+  color: ghostwhite !important;
+}
+
+.nav-link:hover {
+  color: #AEB7C6 !important;
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  border-color: ghostwhite !important;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.donate {
+  transform: scale(1.2, 1.2);
+  color: ghostwhite;
+  border: 3px solid ghostwhite;
+  border-radius: 10px;
+  margin: .5% 4% .5% 4%;
+  padding: .5% 4% .5% 4%;
 }
 
 /* 
@@ -128,60 +164,36 @@ HEADER
 
 .header {
    position: relative;
+   z-index: 1;
    padding: 3%;
+   color: #B01F00;
+   text-align: center;
+   font-size: 270%;
+}
+
+.header p {
+  padding-top: 2%;
 }
 
 .header:before {
     content : "";
-    display: block;
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
-    background-image: url("RWB-tiedye.jpg"); 
+    background-image: url("RWB-tiedye.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
     width: 100%;
     height: 100%;
-    opacity : 0.2;
+    opacity : 0.25;
 }
 
-.logo{
+.logo {
   display: block;
   transform: rotate(-15deg);
-  max-width: 23%;
+  max-width: 45%;
   height: auto;
-  border: solid #B01F00 6px;
-  border-radius: 50%;
-  padding-right: 1.5%;
-  padding-bottom: .5%;
-}
-
-
-/* 
-=========================================================================
-NAVBAR
-=========================================================================
-*/
-
-.brand {
-  color: #B01F00 !important;
-  font-family: URW Chancery L;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 150%;
-}
-
-.nav-link {
-  font-size: 20px;
-}
-
-.nav-link:hover {
-  color: black !important;
-  cursor: pointer;
-}
-
-.navbar-toggler:hover {
-  border-color: black;
-  border-width: 2px;
-  cursor: pointer;
 }
 
 /* 
@@ -190,13 +202,13 @@ SPONSORS
 =========================================================================
 */
 
-.sponsors {
+/*.sponsors {
   padding: 1.5%;
   text-align: center;
   font-size: 150%;
   font-weight: bold;
   background: skyblue;
-}
+}*/
 
 /* 
 =========================================================================
@@ -204,179 +216,94 @@ DETAILS
 =========================================================================
 */
 
-/*#about {
+.initiallyHidden {
+  display: none;
+}
 
-}*/
-
-#about .purpose {
-  padding: 3% 4% 3% 3%;
-  background-color: #0432CE;
+.title {
+  padding: 6%;
   color: ghostwhite;
-  line-height: 1.8;
-  font-size: 160%;
+  font-size: 500%;
+  text-align: center;
 }
 
-.purpose .first {
-  font-size: 120%;
-
+.title:hover {
+  color: lightgrey;
 }
 
-.purpose .popfest {
-  font-size: 140%;
-  margin-top: -20px;
+.title.location-title:hover {
+  color: grey;
 }
 
-#about .event-details {
+.details {
   padding: 3%;
   line-height: 1.2;
-  font-size: 130%;
+  font-size: 250%;
   text-align: center;
   background-color: #E4E4E4;
 }
 
-.event-details .about-the {
+.details a {
   color: #B01F00;
-  font-size: 275%;
+}
+
+.event-title {
+  background-color: #284A85;
+}
+
+.event-details .first-annual {
+  font-size: 150%;
+  color: #3175D8;
 }
 
 .event-details .APF {
-  color: #0432CE;
+  color: #B01F00;
 }
 
 .event-details li {
   margin: 1.5%;
 }
 
-.event-details p {
-  font-size: 120%;  
+.live-music-title {
+  background-color: #9B281F;
 }
 
-.event-details .artists {
-  font-size: 120%;
+.music-details li {
+  margin: 1.5%;
 }
 
-/* 
-=========================================================================
-DONATE AND VOLUNTEER
-=========================================================================
-*/
-
-
-#donate {
-  background-color: #B01F00;
-  padding: 4%;
+.location-title {
+  color: #284A85;
 }
 
-.donate-box {
-  text-align: center;
-  color: ghostwhite;
-  padding: 2%;
-  border: 6px solid black;
-  border-radius: 10px;
-}
-
-.donateToday {
-  padding-bottom: 4%;
-  font-size: 250%;
-  font-weight: bold;
-}
-
-#paypal {
-  padding: 1%;
-}
-
-#paypal:hover {
-  border: 3px solid;
-  border-radius: 10px;
-  transform: scale(1.5, 1.5);
-  background-color: #0432CE;
-}
-
-.proceeds {
-  padding-top: 4%;
-  font-size: 150%;
-  font-style: italic;
-}
-
-#location {
+.location-details {
   position: relative;
+  z-index: 1;
   padding: 3%;
+  color: #B01F00;
+  text-align: center;
+  font-size: 300%;
 }
 
-#location:before {
+.location-details:before {
   content : "";
-  display: block;
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
-  background-image: url("BSP2.png"); 
+  background-image: url("BSP2.png");
+  background-size: cover;
+  background-repeat: no-repeat;  
   width: 100%;
   height: 100%;
-  opacity : 0.3;
-}
-
-.location {  
-  clear: both;
-  text-align: center;
-  font-size: 225%;
+  opacity : 0.25;
 }
 
 #map {
   height: 500px;
   width: 60%;
-  margin: 2% auto 0% auto;
-}  
-
-
-#contact {
-   position: relative;
-   padding: 3%;
-}
-
-#contact:before {
-    content : "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("RWB-tiedye.jpg"); 
-    width: 100%;
-    height: 100%;
-    opacity : 0.2;
-}     
-
-.sponsorships {
-  padding: 0 10% 1% 5%;
-  font-size: 150%;
-  line-height: 1.4;
-  text-align: center;
-  color: #B01F00;
-  font-weight: bold;
-}
-
-.sponsorships-link {
-  font-size: 200%;
-  color: #0432CE;
-}
-
-.sponsorships-link:hover {
-  font-size: 225%;
-  color: #B01F00;
-}
-
-.email-container {
-  padding: 0 3% 0 3%;
-  font-size: 175%;
-  line-height: 1.4;
-  text-align: center;
-  color: #0432CE;
-  font-weight: bold;
-}
-
-.email {
-  color: #B01F00;
-  font-size: 130%;
-}
+  margin: 2% auto 2% auto;
+} 
 
 .footer {
   padding-top: 1%;
@@ -384,7 +311,7 @@ DONATE AND VOLUNTEER
   text-align: center;
   font-size: 175%;
   color: ghostwhite;
-  background-color: #0432CE;
+  background-color: #3175D8;
 }
 
 .org {
@@ -401,60 +328,38 @@ DONATE AND VOLUNTEER
 
 @media (max-width: 767.98px) {
   body {
-    font-size: 50%;
+    font-size: 40%;
+  }
+
+  .nav-link {
+    font-size: 300%;
+  }
+
+  .header {
+    font-size: 225%;
+  }
+
+  .title {
+    padding: 6.5%;
+    font-size: 400%;
+  }
+
+  .donate {
+    transform: scale(.75, .75);
+    padding: 1%;
+    margin: 0%;
   }
 
   #main-logo .logo{
-    max-width: 30%;
-    border: solid #B01F00 3px;
-  }
-
-  .purpose .popfest {
-    margin-top: -10px;
-  }
-
-  .event-details .about-the {
-    font-size: 205%;
-  }
-
-  .event-details p {
-    font-size: 115%;
-  }
-
-  .donate-box {
-    clear: all;
-    border: 0px solid black;
-  }
-
-
-  #paypal {
-    transform: scale(.8, .8);
-  }
-
-  #paypal:hover {
-    border: 2px solid;
-    border-radius: 10px;
-    transform: scale(1.15, 1.15);
-  }
-
-  .location {
-    font-size: 200%;
+    max-width: 80%;
   }
 
   #map {
     height: 200px;
   }
 
-  .sponsorships {
-    padding: 3% 7% 3% 7%;
-  }
-
-  .email-container {
-    padding: 3%;
-  }
-
   .footer {
-    font-size: 11px;
+    font-size: 250%;
   }
 }
 
