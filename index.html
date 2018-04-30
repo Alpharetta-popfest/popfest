@@ -18,7 +18,7 @@
 
      <!-- Site Dependencies -->
     <!-- <script src="app.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
       
@@ -33,188 +33,181 @@
 
   </head>
   <body data-spy="scroll" data-target="#navbar" data-offset="20">
-    <header class="header">
-      <screen class="screen">
-        <h1 id="main-logo">
-          <img class="img-fluid mx-auto logo" src="APF-Logo.png" alt="APF-logo">
-        </h1>
-      </screen>
-    </header>
-
+    
     <!-- Bootstrap 4 Navbar -->
 
-    <nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand brand" href="#">Alpharetta Pop Fest</a>
+    <nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-light bg-light flex-row-reverse">
+      
+      <!-- <a class="navbar-brand brand" href="#">Alpharetta Pop Fest</a> -->
+      <span class="navbar-brand donate">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="4RB5ZZD8NT878">
+          <input type="image" id="paypal" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </span> 
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li> -->
 
           <!-- <li class="nav-item">
             <a class="nav-link" href="#sponsors">Sponsors</a>
           </li> -->
 
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#event">Event Details</a>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#donate">Donate</a>
-          </li>
+          </li> -->
 
           <li class="nav-item">
             <a class="nav-link" href="#location">Location</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="APF-Sponsorship-Info.pdf" target="_blank">Become a Sponsor</a>
+          <li>
+            <a class="nav-link" href="#live-music">Live Music</a>
           </li>
 
-          <!-- <li>
-            <a class="nav-link" href="#bands">Bands</a>
-          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="APF-Sponsorship-Details.pdf" target="_blank">Become a Sponsor</a>
+          </li>
 
           <!-- make this a dropdown form for contacting us -->
           <li class="nav-item">
-            <a class="nav-link" href="#email">Contact Us</a>
+            <a class="nav-link" href="mailto:alpharettapopfest@gmail.com?subject=Popfest%20website">Contact Us</a>
           </li>
 
-        </ul>          
+        </ul>                 
       </div>
     </nav>
 
-    <!-- collapse navbar after click -->
+    <div class="header">
+        <h1 id="main-logo">
+          <img class="img-fluid mx-auto logo" src="APF-Logo-Lg.png" alt="APF-logo">
+        </h1>
+        <p>Free outdoor music festival to benefit Alzheimer's research</p>
+    </div>    
 
-    <script type="text/javascript">
-      $('.nav-link').on('click',function() {
-        $('.navbar-collapse').collapse('hide');
-      });
-    </script>
-
-    <div id="sponsors" class="sponsors container-fluid">
+    <!-- <div id="sponsors" class="sponsors container-fluid">
       <marquee behavior="scroll" direction="left" scrollamount="8">Contact us to advertise your company here</marquee>      
-    </div>
+    </div> -->
     
-    <div id="about" class="about container-fluid">
-      <div class="row">
-        <div class="purpose col-lg-4">
-          <p>We are excited to announce the</p>
-          <p class="first">1st Annual</p>
-          <p class="popfest">ALPHARETTA POP FEST</p>
-          <P>which will be held at Brooke Street Park in downtown Alpharetta on Saturday, June 16th, 2018. The festival will be a free, family-friendly event to raise money and awareness for Alzheimer's Disease.</P>
-        </div>
+    <div id="event">
+      <div class="event-title title">
+        <p>Event Details</p>
+      </div>
 
-        <div class="event-details col-lg-8">
-          <p class="about-the">About the <span class="APF">ALPHARETTA POP FEST</span></p>
-          <ul>
-            <li>
-              <p>Event will start at 2pm with a Children's Music Education Show</p> 
-              <p>featuring <a href="https://www.facebook.com/thesandelsmusicparty/" target="_blank">"The Sandels Music Party"</a></p>
-            </li>
-            <li>
-              <p>"Pop Alley" will be located in the gardens beside Alpharetta City Hall</p>
-              <p>featuring, Food Truck: <a href="http://www.smokinmos.com/" target="_blank">Smoking Mo's</a> & <a href="https://kingofpops.com/" target="_blank">King of Pops</a></p>              
-            </li>
-            <li>
-              <p>Wine tastings provided by</p>
-              <p> <a href="https://www.awesomealpharetta.com/shop/store/vino-100-tinder-box/" target="_blank">Vino 100/Tinder Box</a> &  <a href="http://www.kayavineyards.com/" target="_blank">Kaya Vineyards</a></p>              
-            </li>
-            <li>
-              <p>Beer tastings provided by <a href="https://www.backfortybeer.com/" target="_blank">Back Forty Brewing</a></p>
-            </li>
-            <li>
-              <p>Main Stage will be open from 3pm - 9:30pm</p>
-              <p>featuring artists including:</p>
-              <ul class="artists">
-                <li><a href="http://sailingtodenver.com/" target="_blank">Sailing to Denver</a></li>
-                <li><a href="https://www.facebook.com/TheHotHearts/" target="_blank">The Hot Hearts</a></li>
-                <li><a href="https://www.facebook.com/JiveRevival/" target="_blank">Jive Revival</a></li>
-                <li><a href="https://fatarmdaddy.com/" target="_blank">Fat Arm Daddy</a></li>
-                <li><a href="http://www.mariela.band/" target="_blank">Mariela</a></li>
-              </ul>              
-            </li>
-          </ul>
-        </div>
+      <div class="event-details initiallyHidden details">
+        <p class="first-annual">1st Annual <span class="APF">Alpharetta Pop Fest</span></p>
+        <ul>
+          <li>
+            <p>Event will start at 2pm with a Children's Music Education Show</p> 
+            <p>featuring <a href="https://www.facebook.com/thesandelsmusicparty/" target="_blank">"The Sandels Music Party"</a></p>
+          </li>
+          <li>
+            <p>"Pop Alley" will be located in the gardens beside Alpharetta City Hall</p>
+            <p>featuring: <a href="http://www.smokinmos.com/" target="_blank">Smoking Mo's</a> & <a href="https://kingofpops.com/" target="_blank">King of Pops</a></p>              
+          </li>
+          <li>
+            <p>Wine tastings provided by</p>
+            <p> <a href="https://www.awesomealpharetta.com/shop/store/vino-100-tinder-box/" target="_blank">Vino 100/Tinder Box</a> &  <a href="http://www.kayavineyards.com/" target="_blank">Kaya Vineyards</a></p>              
+          </li>
+          <li>
+            <p>Beer tastings provided by <a href="https://www.backfortybeer.com/" target="_blank">Back Forty Brewing</a></p>
+          </li>
+          <li>
+            <p>Live music from 3pm - 9:30pm</p>      
+          </li>
+        </ul>
       </div>
     </div>
-        
-      <div id="donate" class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="donate-box col-lg-5">
-            <h3 class="donateToday">
-              Make a donation today!
-            </h3>
 
-              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="4RB5ZZD8NT878">
-                <input type="image" id="paypal" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-              </form>   
+    <div id="location">
+      <div class="location-title title">
+        <p>Location</p>
+      </div>
 
-              <p class="proceeds">Proceeds will go to the Alzheimer's Association®</p>            
-          </div>
+      <div class="location-details initiallyHidden details">
+        <div class="park-name">
+          <p>Brooke Street Park</p>
+          <p>Alpharetta, GA</p>          
         </div>
-      </div> 
 
-    <div id="location" class="locationAndMap container-fluid">
-      <h3 class="location">Concert located at Brooke Street Park</h3>
-      <div id="map">
-        <script>
-          function initMap() {
-            var uluru = {lat: 34.074609, lng: -84.291645};
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 17,
-              center: uluru
-            });
-            var marker = new google.maps.Marker({
-              position: uluru,
-              map: map
-            });
-          }
-        </script>
+        <div id="map">
+          <script>
+            function initMap() {
+              var uluru = {lat: 34.074609, lng: -84.291645};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+            }
+          </script>
 
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYA9dzg-YfG4QgXQ36o34LUHabm_VKj8&callback=initMap">
-        </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYA9dzg-YfG4QgXQ36o34LUHabm_VKj8&callback=initMap">
+          </script>
+          
+        </div>
       </div>      
     </div>
-
-<!--     <div id="bands">Musical performances by the following artist:
-
-    </div> -->
-
-    <!-- remove and incorporate a dropdown form from navbar -->
-
-    <div id="contact" class="contactUs container-fluid">
-      <div class="row">
-        <div class="sponsorships col-lg-7">
-          <a class="sponsorships-link" href="APF-Sponsorship-Info.pdf" target="_blank">Sponsorship Details</a>
-          <p>We’re looking for strategic partners. We know our festival will have a vital impact on our community, and we know that meaningful partnerships make all the difference. This is a unique opportunity to build stronger community ties and promote your business in the process.</p>
-        </div>
-
-        <div id="email" class="email-container col-lg-5">
-          <p>If you would like to get in touch with us, </p>
-          <p>please email us at</p>
-          <p><a href="mailto:alpharettapopfest@gmail.com?subject=Popfest%20website" class="email">alpharettapopfest@gmail.com</a>
-          </p>          
-        </div>
+    
+    <div id="live-music">
+      <div class="live-music-title title">
+        <p>Live Music</p>
       </div>
+
+      <div class="music-details initiallyHidden details">
+        <p>Main Stage will be open from 3pm - 9:30pm featuring:</p>
+        <ul class="artists">
+          <li><a href="http://sailingtodenver.com/" target="_blank">Sailing to Denver</a></li>
+          <li><a href="https://www.facebook.com/TheHotHearts/" target="_blank">The Hot Hearts</a></li>
+          <li><a href="https://www.facebook.com/JiveRevival/" target="_blank">Jive Revival</a></li>
+          <li><a href="https://fatarmdaddy.com/" target="_blank">Fat Arm Daddy</a></li>
+          <li><a href="http://www.mariela.band/" target="_blank">Mariela</a></li>
+        </ul>
+      </div>          
     </div>
     
-    <div class="footer container-fluid">
+    <div class="footer">
       <h4>
         For more information on Alzheimer's visit
         <a href="http://www.alz.org/" target="_blank" class="org">www.alz.org</a>
       </h4>
     </div>   
 
+    <!-- jQuery code -->
 
+    <script type="text/javascript">
+      // collaspe navbar after click
+      $(document).ready(function() {
+        $('.nav-link').on('click',function() {
+          $('.navbar-collapse').collapse('hide');
+
+          // open details after clicked from navbar
+          var target = $(this).attr('href');
+          $(target).children('.details').slideToggle('slow');
+        });
+
+        $('.title').on('click' ,function() {
+          $(this).next('.details').slideToggle('slow');
+
+          // add feature to scroll to bottom of div
+          // console.log($(this).next('.details')[0].scrollHeight)
+        });
+      });
+    </script>
 
   </body>
 </html>
